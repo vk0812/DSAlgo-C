@@ -3,27 +3,24 @@ using namespace std;
 
 int main()
 {
-    // A pointer points to the address of the variable in the memory
     int a = 10;
-    int *aptr;
-    aptr = &a; // address
+    int *p = &a;
+    // p = &a (address of a)
+    // *p = a (value of a)
+    cout << p << endl;
+    cout << *p << endl;
+    *p = *p + 1; // updates value of a also
+    cout << p << endl;
     cout << a << endl;
-    cout << *aptr << endl;
-    cout << aptr << endl;
-    cout << &a << endl;
-    // The value of a can be changed from its pointer also
-    *aptr = 20;
+    cout << *p << endl;
+    int *q = p;
+    // since p is address therefore '*' before q variable
+    cout << q << endl;
+    cout << *q << endl;
+    *q = *q + 1;
     cout << a << endl;
-    cout << &a << endl;
-
-    int b = 15;
-    int *c = &b;
-    cout << c << endl;
-    cout << *c << endl;
-    cout << &b << endl;
-    c++; // int occupies 4 bytes
-    cout << c << endl;
-    cout << &b << endl;
-    cout << *c << endl;
-    cout << b << endl;
+    cout << p << endl;
+    cout << *p << endl;
+    cout << q << endl;
+    cout << *q << endl;
 }
